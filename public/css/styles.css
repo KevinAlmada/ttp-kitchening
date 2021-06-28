@@ -22,6 +22,7 @@ body{
 /* HEADER */
 .main-header{
     text-align: center;
+    margin-bottom: 13px;
 }
 .main-header .logo{
      border-radius: 50%;
@@ -41,6 +42,7 @@ body{
     margin-bottom: 1px ;
     padding: 5px;
 }
+
 /* BANNER */
 .banner {
     display: none;
@@ -49,6 +51,7 @@ body{
 
 .vip-products .product{
     /* max-width: 340px; */
+    display: inline-block;
     padding-bottom: 25px;
     max-width: 380px;
 }
@@ -95,6 +98,13 @@ body{
     text-transform: uppercase;
     padding: 5px;
 }
+.main-footer ul li {
+    background-color: var(--red);
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+    margin-bottom: 1px;
+}
 /* media */
 /* tablet */
 @media (min-width: 768px){
@@ -102,17 +112,25 @@ body{
         display: none;
     }
     .main-header .main-nav ul li{
-        display: inline;
-        padding: 12px 14.059px;
-        width: auto%;     
-        margin: 5px;
+        display: inline-block;
+        width: 113px;
+        padding: 12px 0px ;  
+        margin-right: 5px;
+    }
+    /* las child aplica solo al ultimo elemento de los hermanos */
+    .main-header .main-nav ul li:last-child{
+        margin-right: 0;
     }
     .main-header .main-nav ul{
+        display: block;
+    }
+    .main-header .main-nav {
         width: 98.5%; 
         margin-top: 20px;
     } 
     .banner{
         margin-top: 15px;
+        margin-bottom: 10px;
         display: block;
         width: 100%;
     }
@@ -123,18 +141,45 @@ body{
         display: inline-block;
         width: 49%;
     } 
+    
 }
 
-@media (min-width: 1280px){
-    .main-header .main-nav ul li a{
-        width:180px ;
-        height: 50px;
+@media (min-width: 1180px){
+    .container{
+        max-width: 1180px;
     }
+    .main-header .logo{
+        width: 180px;
+    }
+    .main-header .main-nav{
+        margin: 30px 0px 20px 0px;
+    }
+    .main-header .main-nav ul li{
+        width: 180px;
+        margin-right: 8px;
+    }
+    .vip-products .product{
+        padding-bottom: 25px;
+    }
+    .vip-products .product:nth-child(3n){
+        margin-right: 0px;
+    }
+    /* footer */
+    .main-footer ul {
+        background-color: var(--red);
+        text-align: center;
+        height: 180px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    .main-footer ul li {
+        margin-top: 62px;
+        display: inline-block;
+        padding:0 10px ;
+        border-right: 2px solid white;
+    }
+    .main-footer ul li:last-child{
+        border-right: none ;
+    }
+    
 }
-
-
-
-
-
-
-
