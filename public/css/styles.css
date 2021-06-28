@@ -1,0 +1,140 @@
+:root{
+    --grey:#444444;
+    --red:#b92519;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white
+}
+ul{
+    list-style: none;
+}
+body{
+    background-image: url("/images/bg-body.png");
+    padding: 15px 10px 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* HEADER */
+.main-header{
+    text-align: center;
+}
+.main-header .logo{
+     border-radius: 50%;
+ }
+.main-header .toggle-nav{
+    display: block;
+    margin: 20px auto 15px auto;
+    background-color: var(--grey);
+    width: fit-content ;
+    padding: 5px; 
+    color: white;
+    border-radius: 3px;
+}
+.main-header .main-nav ul li{
+    background-color: var(--grey);
+    text-transform: uppercase;
+    margin-bottom: 1px ;
+    padding: 5px;
+}
+/* BANNER */
+.banner {
+    display: none;
+}
+/* products */
+
+.vip-products .product{
+    /* max-width: 340px; */
+    padding-bottom: 25px;
+    max-width: 380px;
+}
+.vip-products .product h2{
+    margin: 15px 0;
+    
+}
+.vip-products .product p {
+    color : var(--grey);
+}
+.vip-products .product a.more {
+    background-color: var(--grey);
+    color: white;
+    text-align: center;
+    display: block;
+    width: 95px;
+    padding: 7px;
+    margin-top:13px;
+}
+.vip-products .product .photo-container{
+    position:relative;/* hace que los elmentos que esten dentro se muevan dentro de el */
+    text-align: center;
+    max-width: 380px;
+}
+.vip-products .product .photo-container .photo{
+    width: 100%;
+}
+.vip-products .product .photo-container .special,
+.vip-products .product .photo-container .zoom{
+    position: absolute;/*te toma el body como contenedor , pero si su caja tiene position relative se mueve dentro de la caja relative*/
+}
+
+.vip-products .product .photo-container .special{
+    left: 70%;/* con esto moves el contenido dentro de su caja */
+}
+.vip-products .product .photo-container .zoom{
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    opacity: 50%;
+    top: 50%;
+    left: 0%;
+    display: block;
+    text-transform: uppercase;
+    padding: 5px;
+}
+/* media */
+/* tablet */
+@media (min-width: 768px){
+    .main-header .toggle-nav{
+        display: none;
+    }
+    .main-header .main-nav ul li{
+        display: inline;
+        padding: 12px 14.059px;
+        width: auto%;     
+        margin: 5px;
+    }
+    .main-header .main-nav ul{
+        width: 98.5%; 
+        margin-top: 20px;
+    } 
+    .banner{
+        margin-top: 15px;
+        display: block;
+        width: 100%;
+    }
+    .banner img{
+        width: 98.5%;
+    }
+    .vip-products .product{
+        display: inline-block;
+        width: 49%;
+    } 
+}
+
+@media (min-width: 1280px){
+    .main-header .main-nav ul li a{
+        width:180px ;
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+
